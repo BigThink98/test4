@@ -1,0 +1,28 @@
+<html>
+<h2>Contact us</h2>
+<div *ngIf="!error">
+    {{warning}}
+</div>
+<form #f='ngForm' (ngSubmit)='onSubmit(f)'>
+
+    <div class="form-group">
+        <label class="control-label" for="username"> Name:</label>
+        <input type="text" class="form-control" id="username" name="username" ngModel required #name="ngModel">
+    </div>
+    <br>
+    <div class="form-group">
+        <label class="control-label" for="email"> Email:</label>
+        <input type="email" class="form-control" id="email" name="email" ngModel required #email="ngModel">
+    </div>
+
+    <br>
+
+    <div class="form-group">
+        <label class="control-label" for="password"> Message:</label>
+        <input type="text" class="form-control" id="message" name="message" ngModel required #message="ngModel">
+    </div>
+
+    <button class="btn btn-primary" type="submit">submit</button>
+</form>
+
+</html>
